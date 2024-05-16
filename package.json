@@ -1,0 +1,18 @@
+{
+  "name": "tmx-parser",
+  "version": "1.0.0",
+  "main": "parser.ts",
+  "scripts": {
+    "start": "ts-node parser.ts"
+  },
+  "dependencies": {
+    "fs": "^0.0.1-security",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5",
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.12",
+    "@types/xml2js": "^0.4.14"
+  }
+}

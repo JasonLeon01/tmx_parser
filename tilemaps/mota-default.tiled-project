@@ -1,0 +1,351 @@
+{
+    "automappingRulesFile": "",
+    "commands": [
+    ],
+    "compatibilityVersion": 1100,
+    "extensionsPath": "extensions",
+    "folders": [
+        "."
+    ],
+    "properties": [
+    ],
+    "propertyTypes": [
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 15,
+            "members": [
+            ],
+            "name": "decoration",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "id": 18,
+            "name": "direction",
+            "storageType": "int",
+            "type": "enum",
+            "values": [
+                "DOWN",
+                "LEFT",
+                "RIGHT",
+                "UP"
+            ],
+            "valuesAsFlags": false
+        },
+        {
+            "color": "#ffffffff",
+            "drawFill": true,
+            "id": 11,
+            "members": [
+                {
+                    "name": "common",
+                    "propertyType": "event",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "count",
+                    "type": "int",
+                    "value": 1
+                },
+                {
+                    "name": "id",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "door",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffff0000",
+            "drawFill": true,
+            "id": 1,
+            "members": [
+                {
+                    "name": "common",
+                    "propertyType": "event",
+                    "type": "class",
+                    "value": {
+                        "graphics": {
+                            "animation_played": true
+                        }
+                    }
+                },
+                {
+                    "name": "id",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "enemy",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": false,
+            "id": 16,
+            "members": [
+                {
+                    "name": "filter",
+                    "type": "string",
+                    "value": "true"
+                },
+                {
+                    "name": "graphics",
+                    "propertyType": "event_graphics",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "passable",
+                    "type": "bool",
+                    "value": false
+                }
+            ],
+            "name": "event",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": false,
+            "id": 17,
+            "members": [
+                {
+                    "name": "animation_played",
+                    "type": "bool",
+                    "value": false
+                },
+                {
+                    "name": "animation_speed",
+                    "type": "int",
+                    "value": 4
+                },
+                {
+                    "name": "direction_fixed",
+                    "type": "bool",
+                    "value": true
+                }
+            ],
+            "name": "event_graphics",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ff00ff00",
+            "drawFill": true,
+            "id": 9,
+            "members": [
+                {
+                    "name": "attribute",
+                    "type": "string",
+                    "value": "undefined"
+                },
+                {
+                    "name": "common",
+                    "propertyType": "event",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "expr",
+                    "type": "string",
+                    "value": "+0"
+                }
+            ],
+            "name": "gem",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ff00ffff",
+            "drawFill": true,
+            "id": 5,
+            "members": [
+                {
+                    "name": "common",
+                    "propertyType": "event",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "count",
+                    "type": "int",
+                    "value": 1
+                },
+                {
+                    "name": "id",
+                    "type": "int",
+                    "value": 0
+                }
+            ],
+            "name": "item",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 19,
+            "members": [
+                {
+                    "name": "common",
+                    "propertyType": "event",
+                    "type": "class",
+                    "value": {
+                        "passable": true,
+                        "transparent": true
+                    }
+                },
+                {
+                    "name": "to_area",
+                    "type": "string",
+                    "value": ""
+                },
+                {
+                    "name": "to_floor",
+                    "type": "string",
+                    "value": "+0"
+                }
+            ],
+            "name": "move",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffa0a0a4",
+            "drawFill": true,
+            "id": 14,
+            "members": [
+                {
+                    "name": "common",
+                    "propertyType": "event",
+                    "type": "class",
+                    "value": {
+                        "graphics": {
+                            "animation_played": true
+                        }
+                    }
+                }
+            ],
+            "name": "npc",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffffffff",
+            "drawFill": true,
+            "id": 3,
+            "members": [
+                {
+                    "name": "common",
+                    "propertyType": "event",
+                    "type": "class",
+                    "value": {
+                    }
+                },
+                {
+                    "name": "key",
+                    "type": "string",
+                    "value": "undefined"
+                }
+            ],
+            "name": "special",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        },
+        {
+            "color": "#ffffaa00",
+            "drawFill": true,
+            "id": 12,
+            "members": [
+                {
+                    "name": "attribute",
+                    "type": "string",
+                    "value": "hp"
+                },
+                {
+                    "name": "common",
+                    "propertyType": "event",
+                    "type": "class",
+                    "value": {
+                        "graphics": {
+                            "animation_played": true
+                        },
+                        "transparent": true
+                    }
+                },
+                {
+                    "name": "debuff",
+                    "type": "string",
+                    "value": "undefined"
+                },
+                {
+                    "name": "expr",
+                    "type": "string",
+                    "value": "-0"
+                },
+                {
+                    "name": "is_debuff",
+                    "type": "bool",
+                    "value": false
+                }
+            ],
+            "name": "trap",
+            "type": "class",
+            "useAs": [
+                "property",
+                "object",
+                "project"
+            ]
+        }
+    ]
+}

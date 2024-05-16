@@ -1,0 +1,79 @@
+{
+    "Map/SizeTest": {
+        "height": 4300,
+        "width": 2
+    },
+    "activeFile": "example.tmx",
+    "expandedProjectPaths": [
+        "."
+    ],
+    "fileStates": {
+        "": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "enemies.tsx": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "example.tmx": {
+            "expandedObjectLayers": [
+                3
+            ],
+            "scale": 1.5,
+            "selectedLayer": 2,
+            "viewCenter": {
+                "x": 263.33333333333337,
+                "y": 238.33333333333331
+            }
+        },
+        "example.tmx#enemies": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "example.tmx#events": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1
+        },
+        "example.tmx#items": {
+            "dynamicWrapping": true,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "example.tmx#mota": {
+            "dynamicWrapping": false,
+            "scaleInDock": 1,
+            "scaleInEditor": 1
+        },
+        "魔塔0F.tmx": {
+            "scale": 1.5,
+            "selectedLayer": 0,
+            "viewCenter": {
+                "x": 251.33333333333337,
+                "y": 214.33333333333331
+            }
+        }
+    },
+    "last.externalTilesetPath": "E:/mota/mota-spark/statics/tilemap-test",
+    "last.imagePath": "E:/mota/mota-spark/statics/graphics/icons",
+    "map.height": 11,
+    "map.lastUsedFormat": "tmx",
+    "map.width": 11,
+    "openFiles": [
+        "example.tmx"
+    ],
+    "project": "mota-default.tiled-project",
+    "property.type": "bool",
+    "recentFiles": [
+        "example.tmx",
+        "enemies.tsx",
+        "魔塔0F.tmx"
+    ],
+    "tileset.embedInMap": true,
+    "tileset.lastUsedFilter": "Tiled 图块集文件 (*.tsx *.xml)",
+    "tileset.lastUsedFormat": "tsx",
+    "tileset.type": 1
+}
