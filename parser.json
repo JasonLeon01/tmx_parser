@@ -516,297 +516,399 @@
       ]
     ]
   },
-  "events": [
+  "groups": [
     {
-      "type": "move",
-      "pos": [
-        7,
-        3
-      ],
-      "properties": [
+      "groupid": 3,
+      "groupname": "Events",
+      "events": [
         {
-          "name": "to_floor",
-          "value": "+1"
-        }
-      ],
-      "file": [
-        "mota.png",
-        null,
-        null
-      ]
-    },
-    {
-      "type": "move",
-      "pos": [
-        4,
-        7
-      ],
-      "properties": [
-        {
-          "name": "to_floor",
-          "value": "-1"
-        }
-      ],
-      "file": [
-        "mota.png",
-        null,
-        null
-      ]
-    },
-    {
-      "type": "enemy",
-      "pos": [
-        6,
-        9
-      ],
-      "properties": [
-        {
-          "name": "id",
-          "value": 2
-        }
-      ],
-      "file": [
-        "Monster01-01",
-        2,
-        1
-      ]
-    },
-    {
-      "type": "enemy",
-      "pos": [
-        6,
-        6
-      ],
-      "properties": [
-        {
-          "name": "id",
-          "value": 1
-        }
-      ],
-      "file": [
-        "Monster01-01",
-        1,
-        1
-      ]
-    },
-    {
-      "type": "enemy",
-      "pos": [
-        7,
-        5
-      ],
-      "properties": [
-        {
-          "name": "id",
-          "value": 1
-        }
-      ],
-      "file": [
-        "Monster01-01",
-        1,
-        1
-      ]
-    },
-    {
-      "type": "enemy",
-      "pos": [
-        2,
-        3
-      ],
-      "properties": [
-        {
-          "name": "id",
-          "value": 1
-        }
-      ],
-      "file": [
-        "Monster01-01",
-        1,
-        1
-      ]
-    },
-    {
-      "type": "enemy",
-      "pos": [
-        12,
-        3
-      ],
-      "properties": [
-        {
-          "name": "id",
-          "value": 2
-        }
-      ],
-      "file": [
-        "Monster01-01",
-        2,
-        1
-      ]
-    },
-    {
-      "type": "gem",
-      "pos": [
-        3,
-        8
-      ],
-      "properties": [
-        {
-          "name": "attribute",
-          "value": "atk"
+          "id": 19,
+          "type": "move",
+          "pos": [
+            7,
+            3
+          ],
+          "gid": 250,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "to_floor",
+              "value": "+1"
+            }
+          ],
+          "file": [
+            "mota.png",
+            null,
+            null
+          ]
         },
         {
-          "name": "expr",
-          "value": "+1"
-        }
-      ],
-      "file": [
-        "Monster01-01",
-        1,
-        1
-      ]
-    },
-    {
-      "type": "item",
-      "pos": [
-        9,
-        9
-      ],
-      "properties": [
+          "id": 20,
+          "type": "move",
+          "pos": [
+            4,
+            7
+          ],
+          "gid": 249,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "to_floor",
+              "value": "-1"
+            }
+          ],
+          "file": [
+            "mota.png",
+            null,
+            null
+          ]
+        },
         {
-          "name": "id",
-          "value": 1
-        }
-      ],
-      "file": [
-        "Item01-01",
-        1,
-        1
-      ]
-    },
-    {
-      "type": "door",
-      "pos": [
-        7,
-        12
-      ],
-      "properties": [
+          "id": 21,
+          "type": "enemy",
+          "pos": [
+            6,
+            9
+          ],
+          "gid": 306,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 2
+            }
+          ],
+          "file": [
+            "Monster01-01",
+            2,
+            1
+          ]
+        },
         {
-          "name": "id",
-          "value": 1
-        }
-      ],
-      "file": [
-        "Event01-Door01",
-        1,
-        1
-      ]
-    },
-    {
-      "type": "item",
-      "pos": [
-        10,
-        9
-      ],
-      "properties": [
+          "id": 22,
+          "type": "enemy",
+          "pos": [
+            6,
+            6
+          ],
+          "gid": 305,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 1
+            }
+          ],
+          "file": [
+            "Monster01-01",
+            1,
+            1
+          ]
+        },
         {
-          "name": "id",
-          "value": 1
-        }
-      ],
-      "file": [
-        "Item01-01",
-        1,
-        1
-      ]
-    },
-    {
-      "type": "door",
-      "pos": [
-        12,
-        10
-      ],
-      "properties": [
+          "id": 23,
+          "type": "enemy",
+          "pos": [
+            7,
+            5
+          ],
+          "gid": 305,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 1
+            }
+          ],
+          "file": [
+            "Monster01-01",
+            1,
+            1
+          ]
+        },
         {
-          "name": "id",
-          "value": 1
-        }
-      ],
-      "file": [
-        "Event01-Door01",
-        1,
-        1
-      ]
-    },
-    {
-      "type": "door",
-      "pos": [
-        12,
-        11
-      ],
-      "properties": [
+          "id": 24,
+          "type": "enemy",
+          "pos": [
+            2,
+            3
+          ],
+          "gid": 305,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 1
+            }
+          ],
+          "file": [
+            "Monster01-01",
+            1,
+            1
+          ]
+        },
         {
-          "name": "id",
-          "value": 2
-        }
-      ],
-      "file": [
-        "Event01-Door01",
-        1,
-        2
-      ]
-    },
-    {
-      "type": "item",
-      "pos": [
-        10,
-        10
-      ],
-      "properties": [
+          "id": 25,
+          "type": "enemy",
+          "pos": [
+            12,
+            3
+          ],
+          "gid": 306,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 2
+            }
+          ],
+          "file": [
+            "Monster01-01",
+            2,
+            1
+          ]
+        },
         {
-          "name": "id",
-          "value": 2
-        }
-      ],
-      "file": [
-        "Item01-01",
-        1,
-        2
-      ]
-    },
-    {
-      "type": "enemy",
-      "pos": [
-        9,
-        5
-      ],
-      "properties": [
+          "id": 26,
+          "type": "gem",
+          "pos": [
+            3,
+            8
+          ],
+          "gid": 305,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "attribute",
+              "value": "atk"
+            },
+            {
+              "name": "expr",
+              "value": "+1"
+            }
+          ],
+          "file": [
+            "Monster01-01",
+            1,
+            1
+          ]
+        },
         {
-          "name": "id",
-          "value": 3
-        }
-      ],
-      "file": [
-        "Monster01-01",
-        3,
-        1
-      ]
-    },
-    {
-      "type": "enemy",
-      "pos": [
-        5,
-        2
-      ],
-      "properties": [
+          "id": 27,
+          "type": "item",
+          "pos": [
+            9,
+            9
+          ],
+          "gid": 313,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 1
+            }
+          ],
+          "file": [
+            "Item01-01",
+            1,
+            1
+          ]
+        },
         {
-          "name": "id",
-          "value": 4
+          "id": 28,
+          "type": "door",
+          "pos": [
+            7,
+            12
+          ],
+          "gid": 309,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 1
+            }
+          ],
+          "file": [
+            "Event01-Door01",
+            1,
+            1
+          ]
+        },
+        {
+          "id": 29,
+          "type": "item",
+          "pos": [
+            10,
+            9
+          ],
+          "gid": 313,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 1
+            }
+          ],
+          "file": [
+            "Item01-01",
+            1,
+            1
+          ]
+        },
+        {
+          "id": 30,
+          "type": "door",
+          "pos": [
+            12,
+            10
+          ],
+          "gid": 309,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 1
+            }
+          ],
+          "file": [
+            "Event01-Door01",
+            1,
+            1
+          ]
+        },
+        {
+          "id": 31,
+          "type": "door",
+          "pos": [
+            12,
+            11
+          ],
+          "gid": 310,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 2
+            }
+          ],
+          "file": [
+            "Event01-Door01",
+            1,
+            2
+          ]
+        },
+        {
+          "id": 32,
+          "type": "item",
+          "pos": [
+            10,
+            10
+          ],
+          "gid": 314,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 2
+            }
+          ],
+          "file": [
+            "Item01-01",
+            1,
+            2
+          ]
+        },
+        {
+          "id": 33,
+          "type": "enemy",
+          "pos": [
+            9,
+            5
+          ],
+          "gid": 307,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 3
+            }
+          ],
+          "file": [
+            "Monster01-01",
+            3,
+            1
+          ]
+        },
+        {
+          "id": 34,
+          "type": "enemy",
+          "pos": [
+            5,
+            2
+          ],
+          "gid": 308,
+          "size": [
+            32,
+            32
+          ],
+          "properties": [
+            {
+              "name": "id",
+              "value": 4
+            }
+          ],
+          "file": [
+            "Monster01-01",
+            4,
+            1
+          ]
         }
-      ],
-      "file": [
-        "Monster01-01",
-        4,
-        1
       ]
     }
   ]

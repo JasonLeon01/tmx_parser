@@ -7,10 +7,18 @@ interface Property {
     value: string | number;
 }
 interface Event {
+    id: number;
     type: string;
     pos: [number, number];
+    gid: number;
+    size: [number, number];
     properties: Property[];
     file: [string, number, number];
+}
+interface ObjectGroup {
+    id: number;
+    name: string;
+    group: Event[];
 }
 
 const mapFilePath = 'tilemaps/example.tmx';
@@ -27,7 +35,7 @@ parser.parseString(mapData, (err: Error | null, result) => {
     const jsonOutput: any = {
         layer_count: 0,
         layers: {},
-        events: [] as Event[]
+        groups: [] as ObjectGroup[]
     };
 
     if (Array.isArray(map.layer)) {
@@ -48,44 +56,47 @@ parser.parseString(mapData, (err: Error | null, result) => {
     if (Array.isArray(map.objectgroup)) {
         map.objectgroup.forEach((group: any) => {
             if (Array.isArray(group.object)) {
+                const events = [] as Event[];
+                const groupid = parseInt(group.$.id, 10);
+                const groupname = group.$.name;
                 group.object.forEach((obj: any) => {
+                    const id = parseInt(obj.$.id, 10);
                     const type = obj.$.type;
                     const pos: [number, number] = [parseFloat(obj.$.x) / 32, parseFloat(obj.$.y) / 32];
-                    var properties = [] as Property[];
-                    obj.properties[0].property.forEach((prop: any) => {
-                        const name = prop.$.name;
-                        var value = prop.$.value;
-                        if (prop.$.type !== undefined && prop.$.type !== null) {
-                            if (prop.$.type === 'bool') {
-                                value = value === 'true';
+                    obj.properties.forEach((objgroup: any) => {
+                        var properties = [] as Property[];
+                        objgroup.property.forEach((prop: any) => {
+                            const name = prop.$.name;
+                            var value = prop.$.value;
+                            if (prop.$.type !== undefined && prop.$.type !== null) {
+                                if (prop.$.type === 'int') {
+                                    value = parseInt(value, 10);
+                                }
+                                else if (prop.$.type === 'float') {
+                                    value = parseFloat(value);
+                                }
                             }
-                            else if (prop.$.type === 'int') {
-                                value = parseInt(value, 10);
-                            }
-                            else if (prop.$.type === 'float') {
-                                value = parseFloat(value);
+                            properties.push({ name, value });
+                        });
+                        const gid = parseInt(obj.$.gid, 10);
+                        const tileset = map.tileset.find((ts: any) => parseInt(ts.$.firstgid, 10) <= gid && gid < parseInt(ts.$.firstgid, 10) + parseInt(ts.$.tilecount, 10));
+                        let filename = '';
+                        if (tileset && tileset.image && tileset.image[0] && tileset.image[0].$ && tileset.image[0].$.source) {
+                            filename = tileset.image[0].$.source.split('/').pop() || '';
+                        }
+                        else if (tileset && tileset.tile && Array.isArray(tileset.tile)) {
+                            const matchingTile = tileset.tile.find((tile: any) => parseInt(tile.$.id, 10) + parseInt(tileset.$.firstgid, 10) === gid);
+                            if (matchingTile && matchingTile.image && matchingTile.image[0] && matchingTile.image[0].$ && matchingTile.image[0].$.source) {
+                                filename = matchingTile.image[0].$.source.split('/').pop() || '';
                             }
                         }
-                        properties.push({ name, value });
+                        const fileParts = filename.split('_');
+                        const file: [string, number, number] = [fileParts[0], parseInt(fileParts[1], 10), parseInt(fileParts[2], 10)];
+                        const size = [parseInt(obj.$.width, 10), parseInt(obj.$.height, 10)] as [number, number];;
+                        events.push({ id, type, pos, gid, size, properties, file });
                     });
-                    const gid = parseInt(obj.$.gid, 10);
-                    const tileset = map.tileset.find((ts: any) => parseInt(ts.$.firstgid, 10) <= gid && gid < parseInt(ts.$.firstgid, 10) + parseInt(ts.$.tilecount, 10));
-
-                    let filename = '';
-                    if (tileset && tileset.image && tileset.image[0] && tileset.image[0].$ && tileset.image[0].$.source) {
-                        filename = tileset.image[0].$.source.split('/').pop() || '';
-                    }
-                    else if (tileset && tileset.tile && Array.isArray(tileset.tile)) {
-                        const matchingTile = tileset.tile.find((tile: any) => parseInt(tile.$.id, 10) + parseInt(tileset.$.firstgid, 10) === gid);
-                        if (matchingTile && matchingTile.image && matchingTile.image[0] && matchingTile.image[0].$ && matchingTile.image[0].$.source) {
-                            filename = matchingTile.image[0].$.source.split('/').pop() || '';
-                        }
-                    }
-                    const fileParts = filename.split('_');
-                    const file: [string, number, number] = [fileParts[0], parseInt(fileParts[1], 10), parseInt(fileParts[2], 10)];
-
-                    jsonOutput.events.push({ type, pos, properties, file });
                 });
+                jsonOutput.groups.push({ groupid, groupname, events });
             }
         });
     }
